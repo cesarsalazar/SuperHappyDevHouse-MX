@@ -1,5 +1,5 @@
-[SuperHappyDevHouse](http://superhappydevhouse.mx/)
-*Reference website about SHDH and how to organize one (in Spanish)
+[SuperHappyDevHouse](http://superhappydevhouse.mx/) --
+* Reference website about SHDH and how to organize one (in Spanish)
 ================================
 
 How to contribute
