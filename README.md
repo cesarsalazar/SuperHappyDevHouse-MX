@@ -7,4 +7,4 @@ How to contribute
 
 Stack
 ---------------------------------------
-* We are using [Sinatra RB](http://www.sinatra.rb.com), [HAML](http://haml-lang.com) and [SASS](http://sass-lang.com). Currently the site is deployed in Heroku.
+* We are using [Sinatra](http://www.sinatra.rb.com), [HAML](http://haml-lang.com) and [SASS](http://sass-lang.com). Currently the site is deployed in [Heroku](http://heroku.com).
