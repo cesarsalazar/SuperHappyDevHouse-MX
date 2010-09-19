@@ -1,15 +1,14 @@
 //Palette
 
-$gray: #8f8c7f
 $white: #FFFFFF
-$light_gray: #DDD
 $gray: #444141
-$black: #222
+$black: #202020
 $yellow: #F5AB0E
 $orange: #F5900E
 $tangerine: #F57B0E
 
 //Mixins
+
 @mixin clear
 	overflow: hidden
 
@@ -21,7 +20,7 @@ $tangerine: #F57B0E
 	padding: $radius
 	
 @mixin layout($columns, $width, $padding)
-	width: $width/$columns - ($padding)
+	width: $width/$columns - $padding
 	padding-right: $padding 
 	float: left
 	
@@ -29,16 +28,15 @@ $tangerine: #F57B0E
 	-moz-box-shadow: $value  
 	-webkit-box-shadow: $value
 	box-shadow: $value
+	
 
-@mixin letterpress($offset)
-	text-shadow: 0 $offset $offset #FFFFFF
-
-//Global
+//Globals
 
 body
 	font-family: Helvetica, Arial, sans-serif
 	background: $gray url("/images/bg.jpg") repeat scroll 0 0
 	font-size: 18px
+
 h1
 	font-family: "Reenie Beanie", Arial, sans-serif
 	color: $white
@@ -59,31 +57,35 @@ h3
 	margin:  0.2em 0
 	color: $yellow
 	text-shadow: 0px 1px 1px #222
-		
+
+p
+	line-height: 1.2em
+	margin-bottom: 1em		
+
 .hr
 	display: block
 	background: transparent url('/images/hr.png') no-repeat scroll 0 0
 	height: 35px
 	width: 853px
 	margin: 10px auto 0
-
-p
-	line-height: 1.2em
-	margin-bottom: 1em
 	
 #contents
 	width: 960px
 	margin: 0 auto
+
 	#header
 		text-align: center
 		margin-top: 30px
+
 		#tagline
 			width: 720px
 			margin: 30px auto 30px
+
 	#main
 		overflow: hidden
 		color: $black
 		text-shadow: 0px 1px 1px #FFF
 		font-weight: bold
+
 		.box
 			@include layout(3, 960px, 20px)
