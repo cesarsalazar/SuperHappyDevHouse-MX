@@ -3,26 +3,69 @@
 $gray: #8f8c7f
 $white: #FFFFFF
 $light_gray: #DDD
-$black: #4f4b4b
+$gray: #444141
+$black: #222
+$yellow: #F5AB0E
+$orange: #F5900E
+$tangerine: #F57B0E
 
-.s
-	text-decoration: line-through
+//Mixins
+@mixin clear
+	overflow: hidden
+
+@mixin round-corners($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-khtml-border-radius: $radius
+	border-radius: $radius
+	padding: $radius
+	
+@mixin layout($columns, $width, $padding)
+	width: $width/$columns - ($padding)
+	padding-right: $padding 
+	float: left
+	
+@mixin box-shadow($value)
+	-moz-box-shadow: $value  
+	-webkit-box-shadow: $value
+	box-shadow: $value
+
+@mixin letterpress($offset)
+	text-shadow: 0 $offset $offset #FFFFFF
+
+//Global
 
 body
-	font-family: "Lucida Grande", Verdana, sans-serif
+	font-family: Helvetica, Arial, sans-serif
 	background: $gray url("/images/bg.jpg") repeat scroll 0 0
-	
+	font-size: 18px
 h1
 	font-family: "Reenie Beanie", Arial, sans-serif
 	color: $white
 	font-size: 40px
 	letter-spacing: -0.05em
+
+h2
+	text-align: center
+	color: $gray
+	font-size: 40px
+	letter-spacing: -0.04em
+	margin: 0.2em 0
+	text-shadow: 0px 1px 1px #FFF
+
+h3
+	font-size: 30px
+	letter-spacing: -0.04em
+	margin:  0.2em 0
+	color: $yellow
+	text-shadow: 0px 1px 1px #222
+		
 .hr
 	display: block
 	background: transparent url('/images/hr.png') no-repeat scroll 0 0
 	height: 35px
 	width: 853px
-	margin: 10px auto
+	margin: 10px auto 0
 #contents
 	width: 960px
 	margin: 0 auto
@@ -32,17 +75,10 @@ h1
 		#tagline
 			width: 720px
 			margin: 30px auto 30px
-		#definitions
-			text-align: left
-			color: $white
-			font-family: Georgia, serif
-			font-style: normal
-			font-weight: bold
-			font-size: 24px
-			letter-spacing: -0.05em
-			text-shadow: rgba(0,0,0,0.5) 1px 1px 2px 
-			.term
-				font-style: italic
-				font-size: 30px
-				color: $white
-			
+	#main
+		overflow: hidden
+		color: $black
+		text-shadow: 0px 1px 1px #FFF
+		font-weight: bold
+		.box
+			@include layout(3, 960px, 20px)

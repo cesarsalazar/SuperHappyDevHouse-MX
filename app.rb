@@ -10,3 +10,8 @@ get '/global.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :global
 end
+
+get '/reset.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :reset
+end
